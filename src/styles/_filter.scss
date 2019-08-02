@@ -1,0 +1,42 @@
+@import '_fonts';
+
+.filter {
+	margin-bottom: 1em;
+	label,
+	select {
+		color: black;
+		font-size: 1em;
+	}
+	label {
+		font-family: openSans, sans-serif;
+		line-height: 2em;
+	}
+	select {
+		-webkit-appearance: none;
+  		-webkit-border-radius: 0px;
+		appearance: none;
+		background-color: white;
+		background-image: url('../resources/images/dropdown.svg');
+		background-position: 90% 50%;
+		background-repeat: no-repeat;
+		background-size: 1em;
+		border: none;
+		border-radius: 0;
+		box-shadow: .1em .1em .25em black;
+		color: black;
+		font-family: openSansLight, sans-serif;
+		padding: .5em 2em .5em .5em;
+		text-transform: capitalize;
+		width: 100%;
+	}
+
+	@media all and (max-width: 600px) {
+	    margin: 2.5%;
+	    display: inline-block;
+	    width: 45%;
+
+	    label {
+	    	display: none;
+	    }
+	}
+}

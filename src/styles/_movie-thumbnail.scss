@@ -1,0 +1,53 @@
+@import '_animations';
+@import '_fonts';
+
+.movie-thumbnail {
+	background-color: black;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: .25em .25em .5em;
+	cursor: pointer;
+	height: 15em;
+	margin: 2em;
+	opacity: 0;
+	transform: scale(1);
+	transition: box-shadow .25s ease-out 0s, transform .25s ease-out 0s, background-image .5s ease-out 0s;
+	width: 10em;
+
+	@for $i from 1 through 10 {
+		&.movie-thumbnail-#{$i} {
+	    	animation: fadeIn .25s ease-out #{.1 * $i + .5}s forwards;
+		}
+	}
+
+	&:hover {
+		box-shadow: .5em .5em .5em;
+		transform: scale(1.02);
+	}
+
+	.overlay {
+		align-items: flex-end;
+		background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.7));
+		display: flex;
+		height: 100%;
+		padding: 1em;
+		width: 100%;
+	}
+	.title {
+		color: white;
+		font-family: openSans, sans-serif;
+		font-size: .8em;
+		line-height: 1.25em;
+		text-align: center;
+		text-transform: uppercase;
+		text-shadow: .25em .25em .5em black;
+		width: 100%;
+	}
+
+	@media all and (max-width: 600px) {
+		height: 12em;
+		margin: 1em;
+		width: 8em;
+	}
+}

@@ -1,0 +1,109 @@
+@import '_fonts';
+
+.movie-highlight {
+	align-content: center;
+	background-image: linear-gradient(to bottom right, rgba(0,0,0,1), rgba(0,0,0,.5));
+	box-shadow: .25em .25em .5em black;
+	color: white;
+	display: flex;
+	height: 17em;
+	font-family: openSansLight, sans-serif;
+	justify-content: space-around;
+	padding: 3vw 2vw;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+
+	&.video-play {
+		.close {
+			display: block;
+		}
+		.play {
+			display: none;
+		}
+		.video-container {
+			transform: translateY(0);
+		}
+	}
+
+	.close {
+		animation: fadeIn .25s ease-out 1s forwards;
+		background-color: rgba(0,0,0,.5);
+		border-radius: 1em 1em 0 0;
+		bottom: -1em;
+	    color: white;
+	    cursor: pointer;
+	    display: none;
+	    font-size: 2em;
+	    height: 1em;
+	    left: 50%;
+	    line-height: 1.25em;
+	    opacity: 0;
+	    position: absolute;
+	    text-align: center;
+	    transform: translateX(-50%);
+	    width: 2em;
+	}
+	.main-rating {
+		font-family: openSans, sans-serif;
+		font-size: 1.4em;
+	}
+	.movie-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	    width: calc(100% - 14.5em);
+	}
+	.movie-poster {
+		background-color: black;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		box-shadow: .25em .25em .5em;
+		color: black;
+		cursor: pointer;
+	    height: 16.875em;
+	    transition: background-image .5s ease-out 0s;
+    	width: 11.25em;
+	}
+	.summary {
+		line-height: 1.4em;
+		overflow: scroll;
+	}
+	.title {
+		font-size: 1.5em;
+		margin-bottom: .5em;
+		text-transform: uppercase;
+	}
+	.user-rating {
+		font-size: .8em;
+		margin-bottom: 1em;
+	}
+
+	@media all and (max-width: 600px) {
+		background-image: linear-gradient(to bottom right, rgba(0,0,0,1), rgba(0,0,0,.7));
+		flex-direction: column;
+		font-size: .8em;
+		height: 32em;
+		justify-content: space-between;
+	    padding: 1em;
+
+		.close {
+			background-color: rgba(0,0,0,.8);
+			border-radius: 0 0 1em 1em;
+			bottom: -1em;
+		    font-size: 4em;
+			line-height: 1em;
+		}
+		.movie-info {
+			height: 15em;
+			justify-content: center;
+			width: 100%;
+		}
+		.movie-poster {
+		    background-position: 50% 12.5%;
+    		height: 14em;
+    		width: 100%;
+		}
+	}
+}

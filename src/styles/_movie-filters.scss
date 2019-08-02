@@ -1,0 +1,13 @@
+.movie-filters {
+	height: 100%;
+	padding: 19em 2em 2em 0em;
+	position: absolute;
+	right: 0;
+	width: 12em;
+
+	@media all and (max-width: 600px) {
+		height: 31em;
+    	padding: 26.5em 1em 0;
+		width: 100%;
+	}
+}

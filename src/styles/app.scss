@@ -1,0 +1,17 @@
+.app {
+	font-size: 16px;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+.loading {
+	background-image: url('../resources/images/loading.gif');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 50%;
+	left: 25%;
+	position: absolute;
+	top: 25%;
+	width: 50%;
+}
